@@ -1,4 +1,5 @@
 #![feature(proc_macro_hygiene, decl_macro)]
+use std::time::{SystemTime, UNIX_EPOCH};
 
 #[macro_use] extern crate rocket;
 use rocket::State;
@@ -6,18 +7,24 @@ use rocket::request::{Request, Outcome, FromRequest};
 use rocket::http::{Method, Status};
 use rocket_cors::{AllowedHeaders, AllowedOrigins, Guard, Responder};
 
-use jwt_simple::prelude::*;
-
+extern crate frank_jwt;
+#[macro_use] extern crate serde_json;
+use frank_jwt::{Algorithm, encode, decode, ValidationOptions};
 
 extern crate base64;
 
+#[derive(Debug, Clone)]
 struct Secrets {
     client_id: String,
     owner_id: String,
     secret: String
 }
 
-struct ApiKey(String);
+struct ApiKey {
+    secret: Secrets,
+    channel_id: String,
+    colour: String
+}
 
 #[derive(Debug)]
 enum ApiKeyError {
@@ -26,26 +33,25 @@ enum ApiKeyError {
     Invalid,
 }
 
-fn is_valid(token: &str, secret: &String) -> bool {
-    println!("token: {}  secret: {}", token, secret);
+fn is_valid(token: &str, secret: &Secrets, api: &mut ApiKey) -> bool {
     let bearer = token.split(" ").last().unwrap();
-    println!("bearer: {}", bearer);
-    let base64_secret = base64::decode(secret).unwrap();
-    println!("{:?}", base64_secret);
-    // let result = decode(&bearer, &base64_secret, Algorithm::HS256, &ValidationOptions::default());
-    // if result.is_err() { eprintln!("{:?}", result.err()); return false; }
-    // let (header, payload) = result.unwrap();
-    let key = HS256Key::from_bytes(base64_secret.as_ref());
+    let base64_secret = base64::decode(&secret.secret).unwrap();
 
-    let claims = key.verify_token::<NoCustomClaims>(&bearer, None);
+    let result = decode(&bearer,
+        &base64_secret,
+        Algorithm::HS256,
+        &ValidationOptions::default());
+    
+    if result.is_err() { eprintln!("{:?}", result.err()); return false; }
+    
+    let (_header, payload) = result.unwrap();
 
-    if claims.is_err() {
-        println!("{:?}", claims);
-        return false;
-    }
-    else {
-        println!("It works!");
-    }
+    let to_strip = String::from('"');
+    let channel_id = payload["channel_id"].to_string().chars().filter(|&c| !to_strip.contains(c)).collect();
+    println!("{:?} {:?} converts to {}", payload["channel_id"], payload["opaque_user_id"], channel_id);
+
+    api.channel_id = channel_id;
+    api.colour = "#FFFFFF".into();
 
     true
 }
@@ -56,14 +62,51 @@ impl<'a, 'r> FromRequest<'a, 'r> for ApiKey {
     fn from_request(request: &'a Request<'r>) -> Outcome<Self, Self::Error> {
         let keys: Vec<_> = request.headers().get("Authorization").collect();
         let secrets = request.guard::<State<Secrets>>().unwrap();
+        let mut api_key = ApiKey { secret: secrets.clone(), channel_id: String::from(""), colour: String::from("") };
         
         match keys.len() {
             0 => Outcome::Failure((Status::BadRequest, ApiKeyError::Missing)),
-            1 if is_valid(keys[0], &secrets.secret) => Outcome::Success(ApiKey(String::from("Test"))),
+            1 if is_valid(keys[0], &secrets, &mut api_key) => Outcome::Success(api_key),
             1 => Outcome::Failure((Status::BadRequest, ApiKeyError::Invalid)),
             _ => Outcome::Failure((Status::BadRequest, ApiKeyError::BadCount)),
         }
     }
+}
+
+fn broadcast_colour_change(channel_id: String, colour: String, secret: &Secrets) {
+    let expiry = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_secs() + 600;
+    // create jwt
+    let header = json!({});
+    let payload = json!({
+        "exp": expiry,
+        "channel_id": channel_id,
+        "user_id": secret.owner_id,
+        "role": "external",
+        "pubsub_perms": {
+            "send": ['*']
+        }
+    });
+    let secret_base64 = base64::decode(&secret.secret).unwrap();
+    let jwt = encode(header, &secret_base64, &payload, Algorithm::HS256);
+
+    if jwt.is_err() {
+        println!("Error creating jwt: {:?}", jwt);
+        return;
+    }
+
+    // put into payload
+    let token = format!("Bearer {}", jwt.unwrap());
+
+    let response = ureq::post(
+        format!("https://api.twitch.tv/extensions/message/{}", channel_id).as_str())
+        .set("Authorization", token.as_str())
+        .set("Client-Id", secret.client_id.as_str())
+        .set("Content-Type", "application/json")
+        .send_json(json!({ "content_type": "application/json", "message": colour, "targets": ["broadcast"]}));
+    
+    if ! response.ok() {
+        println!("{:?}", response);
+    } 
 }
 
 #[get("/")]
@@ -73,7 +116,7 @@ fn index() -> &'static str {
 
 #[get("/color/query")]
 fn query_colour(cors: Guard<'_>, _api_key: ApiKey) -> Responder<&str> {
-    cors.responder("#6164fe")
+    cors.responder("#6441a4")
 }
 
 #[options("/color/query")]
@@ -82,8 +125,9 @@ fn option_query_colour(cors: Guard<'_>) -> Responder<&str> {
 }
 
 #[post("/color/cycle")]
-fn cycle_colour(cors: Guard<'_>, _api_key: ApiKey) -> Responder<&str> {
-    cors.responder("#ffffff")
+fn cycle_colour(cors: Guard<'_>, api_key: ApiKey) -> Responder<String> {
+    broadcast_colour_change(api_key.channel_id,api_key.colour.clone(), &api_key.secret);
+    cors.responder(api_key.colour)
 }
 
 #[options("/color/cycle")]
