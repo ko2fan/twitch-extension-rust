@@ -1,0 +1,13 @@
+/home/david/twitch/extensions-hello-world/backend/target/debug/deps/tracing-a9cc9ad71fcd8399.rmeta: /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/lib.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/macros.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/dispatcher.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/field.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/instrument.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/level_filters.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/span.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/stdlib.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/subscriber.rs
+
+/home/david/twitch/extensions-hello-world/backend/target/debug/deps/tracing-a9cc9ad71fcd8399.d: /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/lib.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/macros.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/dispatcher.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/field.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/instrument.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/level_filters.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/span.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/stdlib.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/subscriber.rs
+
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/lib.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/macros.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/dispatcher.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/field.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/instrument.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/level_filters.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/span.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/stdlib.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/tracing-0.1.28/src/subscriber.rs:

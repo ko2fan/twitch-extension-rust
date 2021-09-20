@@ -1,0 +1,13 @@
+/home/david/twitch/heroquest/backend/target/debug/deps/pkcs1-92df532bf4f7b0c4.rmeta: /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/lib.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/error.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/private_key.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/public_key.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/traits.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/version.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/document.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/document/private_key.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/document/public_key.rs
+
+/home/david/twitch/heroquest/backend/target/debug/deps/pkcs1-92df532bf4f7b0c4.d: /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/lib.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/error.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/private_key.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/public_key.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/traits.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/version.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/document.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/document/private_key.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/document/public_key.rs
+
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/lib.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/error.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/private_key.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/public_key.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/traits.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/version.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/document.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/document/private_key.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/pkcs1-0.2.4/src/document/public_key.rs:

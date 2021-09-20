@@ -1,0 +1,6 @@
+[production.tls]
+certs = "localhost.pem"
+key = "localhost-key.pem"
+
+[development]
+port = 8081

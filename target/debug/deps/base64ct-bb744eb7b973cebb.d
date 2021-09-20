@@ -1,0 +1,12 @@
+/home/david/twitch/heroquest/backend/target/debug/deps/base64ct-bb744eb7b973cebb.rmeta: /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/lib.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/encoding.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/errors.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/variant.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/variant/bcrypt.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/variant/crypt.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/variant/standard.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/variant/url.rs
+
+/home/david/twitch/heroquest/backend/target/debug/deps/base64ct-bb744eb7b973cebb.d: /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/lib.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/encoding.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/errors.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/variant.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/variant/bcrypt.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/variant/crypt.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/variant/standard.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/variant/url.rs
+
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/lib.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/encoding.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/errors.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/variant.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/variant/bcrypt.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/variant/crypt.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/variant/standard.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/base64ct-1.1.0/src/variant/url.rs:

@@ -1,0 +1,16 @@
+/home/david/twitch/extensions-hello-world/backend/target/debug/deps/ryu-9209e0ba8552ce8b.rmeta: /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/lib.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/buffer/mod.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/common.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/d2s.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/d2s_full_table.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/d2s_intrinsics.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/digit_table.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/f2s.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/f2s_intrinsics.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/pretty/mod.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/pretty/exponent.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/pretty/mantissa.rs
+
+/home/david/twitch/extensions-hello-world/backend/target/debug/deps/ryu-9209e0ba8552ce8b.d: /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/lib.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/buffer/mod.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/common.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/d2s.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/d2s_full_table.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/d2s_intrinsics.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/digit_table.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/f2s.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/f2s_intrinsics.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/pretty/mod.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/pretty/exponent.rs /home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/pretty/mantissa.rs
+
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/lib.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/buffer/mod.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/common.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/d2s.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/d2s_full_table.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/d2s_intrinsics.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/digit_table.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/f2s.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/f2s_intrinsics.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/pretty/mod.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/pretty/exponent.rs:
+/home/david/.cargo/registry/src/github.com-1ecc6299db9ec823/ryu-1.0.5/src/pretty/mantissa.rs:
