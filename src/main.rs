@@ -13,6 +13,8 @@ use frank_jwt::{Algorithm, encode, decode, ValidationOptions};
 
 extern crate base64;
 
+use random_color::RandomColor;
+
 #[derive(Debug, Clone)]
 struct Secrets {
     client_id: String,
@@ -48,11 +50,10 @@ fn is_valid(token: &str, secret: &Secrets, api: &mut ApiKey) -> bool {
 
     let to_strip = String::from('"');
     let channel_id = payload["channel_id"].to_string().chars().filter(|&c| !to_strip.contains(c)).collect();
-    println!("{:?} {:?} converts to {}", payload["channel_id"], payload["opaque_user_id"], channel_id);
 
     api.channel_id = channel_id;
-    api.colour = "#FFFFFF".into();
-
+    api.colour = RandomColor::new().to_hex();
+    
     true
 }
 
@@ -111,7 +112,7 @@ fn broadcast_colour_change(channel_id: String, colour: String, secret: &Secrets)
 
 #[get("/")]
 fn index() -> &'static str {
-    "Hello, world!"
+    "https://twitch.tv/ko2fan"
 }
 
 #[get("/color/query")]
@@ -136,10 +137,10 @@ fn option_cycle_colour(cors: Guard<'_>) -> Responder<&str> {
 }
 
 fn main() {
-    let arg_matches = clap::App::new("backend")
-        .version("0.0.1")
+    let arg_matches = clap::App::new("EBS")
+        .version("0.1.0")
         .author("David Athay <ko2fan@gmail.com>")
-        .about("Twitch extention service")
+        .about("Twitch extention example")
         .args_from_usage("-c, --client_id [client_id] 'Set the id of the client'
         -s, --secret [secret] 'Set the secret'
         -o, --owner_id [owner_id] 'Set the id of the owner'")
